@@ -1,3 +1,14 @@
-import sys
+import json
+
 def handler(event, context):
-    return 'Hello from AWS Lambda using Python' + sys.version + '!'
+    body = {
+        "message": "Go Serverless v1.0! Your function executed successfully!",
+        "input": event
+    }
+
+    response = {
+        "statusCode": 200,
+        "body": json.dumps(body)
+    }
+
+    return response

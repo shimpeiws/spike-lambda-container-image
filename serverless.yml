@@ -11,4 +11,9 @@ provider:
 
 functions:
   hello:
-    image: "607754652120.dkr.ecr.ap-northeast-1.amazonaws.com/lambda-python@sha256:88d67e38978cfc5da0693897172e05dceb13ede6148dba1e8958a9e1b56c9436"
+    image: "607754652120.dkr.ecr.ap-northeast-1.amazonaws.com/lambda-python@sha256:36c5fa3d6843137ecae8c82f4d64576c7490b08b9a9f3237c246dacc46a8c844"
+    events:
+      - http:
+          path: /hello
+          method: get
+          cors: true
